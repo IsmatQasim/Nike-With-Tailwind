@@ -4,15 +4,15 @@ import { navLinks } from '../constants';
 const Nav = () => {
   return (
     <header className='padding-x
-    py-8 absolute z-10 w-full'>
+    py-2 absolute z-10 w-full'>
         <nav className='flex justify-between 
         items-center max-container'>
             <a href="/">
                 <img 
                 src={headerLogo}
                 alt='Logo'
-                width={130}
-                height={29}
+                width={80}
+                height={20}
                 />
             </a>
             <ul className='flex-1 flex
@@ -26,7 +26,8 @@ const Nav = () => {
                         errat leading-normal
                         text-lg
                         text-slate-gray
-                        '>
+                        hover:border-b-2 border-blue-500
+                       hover:text-black'>
                             {item.label}
                         </a>
                     </li>
