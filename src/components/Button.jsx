@@ -1,6 +1,6 @@
 
 const Button = ({label , iconURL, backgroundColor, textColor,
-borderColor, hoverBackgroundColor }) => {
+borderColor, hoverBackgroundColor, fullWidth }) => {
   return (
     <button className={`flex justify-center
     items-center gap-2 px-7 py-4 border font-montserrat
@@ -9,7 +9,7 @@ borderColor, hoverBackgroundColor }) => {
       backgroundColor
        ? `${backgroundColor} ${textColor} ${borderColor} ${hoverBackgroundColor}`
     :"bg-blue-500 text-white border-blue-500 hover:bg-blue-600 "}'
-    rounded-full`}>
+    rounded-full ${fullWidth && 'w-full'}`}>
         {label}
         {iconURL && <img 
         src={iconURL}
