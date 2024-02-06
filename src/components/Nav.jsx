@@ -1,7 +1,14 @@
 import { headerLogo } from '/assets/images';
 import { hamburger } from '/assets/icons';
 import { navLinks } from '../constants';
+import { useState } from 'react';
 const Nav = () => {
+
+    const [showNavLinks, setShowNavLinks] = useState(false);
+
+    const handleHamburgerClick = () => {
+      setShowNavLinks(!showNavLinks);
+    };
   return (
     <header className='padding-x
     py-2 absolute z-10 w-full'>
@@ -15,9 +22,8 @@ const Nav = () => {
                 height={20}
                 />
             </a>
-            <ul className='flex-1 flex
-            justify-center items-center
-            gap-16 max-lg:hidden'>
+            <ul className={`flex-1 flex justify-center items-center gap-16 
+            ${showNavLinks ? ' max-md:flex-col max-md:gap-1 max-md:text-sm max-md:p-0 max-md:ml-[250px]' : 'max-lg:hidden '}`} >
                 {navLinks.map((item) =>(
                     <li key={item.label}>
                         <a
@@ -39,6 +45,7 @@ const Nav = () => {
                 alt='HamBurger'
                 width={25}
                 height={25}
+                onClick={handleHamburgerClick}
                 />
             </div>
         </nav>

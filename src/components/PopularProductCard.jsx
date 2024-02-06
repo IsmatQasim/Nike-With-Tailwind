@@ -5,7 +5,8 @@ const PopularProductCard = ({ imgURL, name, price }) => {
     w-full max-sm:w-full'>
       <img src={imgURL} 
       alt={name} 
-      className='w-[280px] h-[280px]' />
+      className='w-[280px] h-[280px] transition ease-in-out
+      hover:-translate-y-1 hover:scale-110'  />
       <div className='mt-8 flex 
       justify-start gap-2.5'>
         <img 
