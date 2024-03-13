@@ -23,7 +23,7 @@ const Nav = () => {
                 />
             </a>
             <ul className={`flex-1 flex justify-center items-center gap-16 
-            ${showNavLinks ? ' max-md:flex-col max-md:gap-1 max-md:text-sm max-md:p-0 max-md:ml-[250px]' : 'max-lg:hidden '}`} >
+                   ${showNavLinks ? ' max-md:flex-col max-md:gap-1 max-md:text-sm max-md:p-0 max-md:ml-[250px]' : 'max-lg:hidden '}`} >
                 {navLinks.map((item) =>(
                     <li key={item.label}>
                         <a
